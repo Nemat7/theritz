@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE RITZ - Гастробар</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+    <div class="container">
+        <div class="header__inner">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="THE RITZ Gastrobar" class="logo-image">
+            </a>
+            <nav class="nav">
+                <a href="https://menu.ps.me/sXhpP_pCe5I" class="nav__link">Меню</a>
+                <a href="delivery.html" class="nav__link">Доставка</a>
+<!--                Убрать Доставку-->
+                <a href="interior.html" class="nav__link">Интерьер</a>
+                <a href="news.html" class="nav__link">Новости</a>
+<!--                За место Новости нужно сделать Событие тут будет галерея будущих и прощедщих концертов и т,д-->
+                <a href="about.html" class="nav__link">О нас</a>
+<!--                Убрать О нас-->
+                <a href="contacts.html" class="nav__link">Контакты</a>
+            </nav>
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+    <!-- Mobile Menu -->
+   <div class="mobile-menu" id="mobile-menu">
+        <button class="mobile-menu__close" id="mobile-menu-close">×</button>
+        <nav class="mobile-nav">
+            <a href="https://menu.ps.me/sXhpP_pCe5I" class="mobile-nav__link">Меню</a>
+            <a href="delivery.html" class="mobile-nav__link">Доставка</a>
+            <a href="interior.html" class="mobile-nav__link active">Интерьер</a>
+            <a href="news.html" class="mobile-nav__link">Новости</a>
+            <a href="about.html" class="mobile-nav__link">О нас</a>
+            <a href="contacts.html" class="mobile-nav__link">Контакты</a>
+        </nav>
+    </div>
+
+    <!-- Hero Slider -->
+    <section class="hero">
+        <div class="swiper-container hero-swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide hero-slide" style="background-image: url('images/IMG_0635.JPG');">
+                    <div class="container">
+                        <div class="hero__content">
+                            <h1 class="hero__title">THE RITZ</h1>
+                            <p class="hero__subtitle">Гастробар с английским шармом</p>
+                            <div class="hero__buttons">
+                                <!-- <button class="btn btn--primary" id="hero-booking-btn">Забронировать столик</button> -->
+                                <button class="btn btn--outline">Посмотреть меню</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide hero-slide" style="background-image: url('images/IMG_0637.JPG');">
+                    <div class="container">
+                        <div class="hero__content">
+                            <h1 class="hero__title">THE RITZ</h1>
+                            <p class="hero__subtitle">Гастробар с английским шармом</p>
+                            <div class="hero__buttons">
+                                <!-- <button class="btn btn--primary" id="hero-booking-btn2">Забронировать столик</button> -->
+                                <button class="btn btn--outline">Посмотреть меню</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <div class="about__inner">
+                <h2 class="about__title">Гастрономия и отдых в лучших традициях</h2>
+                <p class="about__text">THE RITZ — это не просто гастробар. Это место силы для тех, кто ценит качественную кухню, креативные коктейли, премиальные кальяны и безупречное обслуживание.</p>
+                <button class="btn btn--outline">Узнать нашу историю</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery">
+        <div class="container">
+            <h2 class="gallery__title">Наша галерея</h2>
+            <div class="gallery__grid">
+                <div class="gallery__item">
+                    <img src="images/MUKL8842.jpg" alt="Интерьер" class="gallery__image">
+                </div>
+                <div class="gallery__item">
+                    <img src="images/MUKL8823.jpg" alt="Блюда" class="gallery__image">
+                </div>
+                <div class="gallery__item">
+                    <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Y29ja3RhaWx8ZW58MHx8MHx8&w=1000&q=80" alt="Коктейли" class="gallery__image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <h2 class="map-section__title">Как нас найти</h2>
+            <div class="map-content">
+                <div class="map-container" id="map"></div>
+                <div class="map-info">
+                    <h3 class="map-info__title">ЖДЕМ В ГОСТИ</h3>
+                    <p class="map-info__address">
+                        г. Душанбе, ул. Хусейнзода, 28<br>
+                        На против головного офиса TCELL
+                    </p>
+                    <p class="map-info__hours">
+                        Пн-Чт 12:00-02:00, Вс<br>
+                        Пт-Сб 12:00-03:00
+                    </p>
+                    <div class="map-info__contacts">
+                        <a href="tel:+992977500500" class="map-info__phone">+(992)977500500</a>
+                        <!-- <a href="mailto:info@gustogastrobar.com" class="map-info__email">info@gustogastrobar.com</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__logo">THE RITZ</div>
+                <p class="footer__copyright">© 2024 THE RITZ Гастробар. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Booking Button -->
+    <div class="floating-btn" id="floating-booking-btn">
+        Забронировать столик
+    </div>
+
+    <!-- Booking Modal -->
+    <div class="modal" id="booking-modal">
+        <div class="modal__content">
+            <span class="modal__close">&times;</span>
+            <h2 class="modal__title">Забронировать столик</h2>
+            <form class="booking-form" id="booking-form">
+                <div class="form__group">
+                    <input type="text" placeholder="Ваше имя" required>
+                </div>
+                <div class="form__group">
+                    <input type="tel" placeholder="Телефон" required pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" title="Формат: +7 (999) 999-99-99">
+                </div>
+                <div class="form__group">
+                    <input type="date" placeholder="Дата" required>
+                </div>
+                <div class="form__group">
+                    <input type="time" placeholder="Время" required>
+                </div>
+                <div class="form__group">
+                    <select required>
+                        <option value="" disabled selected>Количество гостей</option>
+                        <option value="1">1 человек</option>
+                        <option value="2">2 человека</option>
+                        <option value="3">3 человека</option>
+                        <option value="4">4 человека</option>
+                        <option value="5+">5+ человек</option>
+                    </select>
+                </div>
+                <div class="form__group">
+                    <textarea placeholder="Ваши пожелания (например, у окна)"></textarea>
+                </div>
+                <button type="submit" class="btn btn--primary">Подтвердить бронь</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=0a7090f3-f7eb-42d6-b4dd-f108bb76cf8d&lang=ru_RU" type="text/javascript"></script>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
