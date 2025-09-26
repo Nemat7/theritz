@@ -1,14 +1,46 @@
-// Initialize Swiper
-const swiper = new Swiper('.hero-swiper', {
-    loop: true,
-    autoplay: {
-        delay: 5000,
-    },
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
+// Correct Swiper initialization with scroll prevention
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize Swiper with proper settings
+    const heroSwiper = new Swiper('.hero-swiper', {
+        direction: 'horizontal',
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        // Enable smooth sliding
+        speed: 600,
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true
+        },
+        // Proper touch settings
+        touchRatio: 1,
+        touchAngle: 45,
+        simulateTouch: true,
+        shortSwipes: true,
+        longSwipes: true,
+        followFinger: true,
+        // Prevent scroll issues but keep functionality
+        resistance: true,
+        resistanceRatio: 0.5,
+        // Autoplay if needed
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+    });
+
+    // Only prevent horizontal scroll on body, don't break swiper
+    document.body.style.overflowX = 'hidden';
+
+    // Ensure swiper elements can still function
+    const swiperElements = document.querySelectorAll('.hero-swiper, .swiper-wrapper');
+    swiperElements.forEach(el => {
+        el.style.overflow = 'visible';
+    });
 });
+
 
 // Mobile Menu
 const mobileMenuBtn = document.getElementById('mobile-menu-btn');

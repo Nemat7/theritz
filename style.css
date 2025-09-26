@@ -199,6 +199,23 @@ body {
 
 /* Floating Booking Button */
 .floating-btn {
+    /*position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    background: #8B1E3F;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    box-shadow: 0 4px 20px rgba(139, 30, 63, 0.4);
+    cursor: pointer;
+    transition: all 0.3s;
+    white-space: nowrap;*/
     position: fixed;
     bottom: 30px;
     left: 50%;
@@ -216,9 +233,14 @@ body {
     cursor: pointer;
     transition: all 0.3s;
     white-space: nowrap;
+    /* Добавляем для мобильных */
+    width: auto;
+    min-width: max-content;
 }
 
 .floating-btn:hover {
+    /*transform: translateX(-50%) scale(1.05);
+    background: #9D2B4D;*/
     transform: translateX(-50%) scale(1.05);
     background: #9D2B4D;
 }
@@ -569,10 +591,53 @@ body {
     }
     
     .floating-btn {
-        bottom: 20px;
+        /*bottom: 20px;
         padding: 12px 25px;
-        font-size: 14px;
+        font-size: 14px;*/
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        max-width: 280px;
+        text-align: center;
+        justify-content: center;
     }
+    /*это только что добавил*/
+    .floating-btn:hover {
+        transform: translateX(-50%) scale(1.05);
+    }
+
+    .header__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .logo-image {
+        width: 80px;
+        height: 32px;
+    }
+
+    /* Центрируем кнопку меню */
+    .mobile-menu-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        margin: 0;
+    }
+
+    /* Убедимся, что лого и кнопка правильно выровнены */
+    .logo {
+        flex: 1;
+    }
+
+    .mobile-menu-btn {
+        flex: 0 0 auto;
+    }
+
+
 }
 
 @media (max-width: 480px) {
@@ -594,6 +659,20 @@ body {
     
     .map-info__title {
         font-size: 1.5rem;
+    }
+
+    .header__inner {
+        padding: 8px 0;
+    }
+
+    .logo-image {
+        width: 70px;
+        height: 28px;
+    }
+
+    .mobile-menu-btn {
+        width: 35px;
+        height: 35px;
     }
 }
 
